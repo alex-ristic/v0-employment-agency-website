@@ -2,12 +2,10 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
+import { ContactForm } from "@/components/contact-form"
 
 export default function KontaktPage() {
   const { t } = useLanguage()
@@ -29,43 +27,7 @@ export default function KontaktPage() {
             <div>
               <Card className="border-border">
                 <CardContent className="pt-6">
-                  <form className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="ime" className="block text-sm font-medium mb-2 text-foreground">
-                          {t.contact.name}
-                        </label>
-                        <Input id="ime" placeholder={t.contact.name} />
-                      </div>
-                      <div>
-                        <label htmlFor="prezime" className="block text-sm font-medium mb-2 text-foreground">
-                          {t.contact.email}
-                        </label>
-                        <Input id="prezime" placeholder={t.contact.email} />
-                      </div>
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground">
-                        {t.contact.email}
-                      </label>
-                      <Input id="email" type="email" placeholder={t.contact.email} />
-                    </div>
-                    <div>
-                      <label htmlFor="telefon" className="block text-sm font-medium mb-2 text-foreground">
-                        {t.contact.phone}
-                      </label>
-                      <Input id="telefon" type="tel" placeholder={t.contact.phone} />
-                    </div>
-                    <div>
-                      <label htmlFor="poruka" className="block text-sm font-medium mb-2 text-foreground">
-                        {t.contact.message}
-                      </label>
-                      <Textarea id="poruka" placeholder={t.contact.message} rows={4} />
-                    </div>
-                    <Button type="submit" className="w-full">
-                      {t.contact.send}
-                    </Button>
-                  </form>
+                  <ContactForm />
                 </CardContent>
               </Card>
             </div>

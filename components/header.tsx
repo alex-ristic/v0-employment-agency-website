@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { Menu, X, Globe } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
@@ -22,8 +23,15 @@ export function Header() {
     <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <span className="text-xl font-bold text-foreground">Human Potential Agency</span>
+          <Link href="/" className="flex items-center gap-3 group" aria-label="Human Potential Agency home">
+            <Image
+              src="/human-potential-agency-logo.jpg"
+              alt="Human Potential Agency"
+              width={260}
+              height={80}
+              priority
+              className="h-12 w-auto object-contain md:h-14"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-6">
