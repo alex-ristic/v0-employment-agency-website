@@ -12,7 +12,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      headline: "No.1 Partner for Hospitality and Hotel Staff Recruitment",
+      headline: "No.1 Partner for Hospitality Staff Recruitment",
       subheadline:
         "Specialized agency for finding the best staff for your hospitality business. Fast, professional and reliable.",
       contactUs: "Contact Us",
@@ -79,7 +79,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      description: "No.1 Partner for Hospitality and Hotel Staff Recruitment",
+      description: "No.1 Partner for Hospitality Staff Recruitment",
       rights: "© 2025 Human Potential Agency. All rights reserved.",
     },
     // Staff Page
