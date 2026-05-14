@@ -30,7 +30,7 @@ export function Header() {
               width={44}
               height={44}
               priority
-              className="h-10 w-10 rounded-full object-contain md:h-11 md:w-11"
+              className="h-11 w-11 object-contain md:h-12 md:w-12"
             />
             <span className="text-xl font-bold text-foreground leading-tight">Human Potential Agency</span>
           </Link>
