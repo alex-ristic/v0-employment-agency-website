@@ -25,13 +25,14 @@ export function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group" aria-label="Human Potential Agency home">
             <Image
-              src="/human-potential-agency-logo.jpg"
-              alt="Human Potential Agency"
-              width={260}
-              height={80}
+              src="/human-potential-agency-logo-icon.jpg"
+              alt="Human Potential Agency logo"
+              width={44}
+              height={44}
               priority
-              className="h-12 w-auto object-contain md:h-14"
+              className="h-10 w-10 rounded-full object-contain md:h-11 md:w-11"
             />
+            <span className="text-xl font-bold text-foreground leading-tight">Human Potential Agency</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-6">
