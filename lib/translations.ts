@@ -662,7 +662,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      headline: "No.1 Partner für die Einstellung von Gastronomie- und Hotelpersonal",
+      headline: "No.1 Partner for Hospitality Staff Recruitment",
       subheadline:
         "Spezialisierte Agentur für die Suche nach dem besten Personal für Ihr Gastronomieunternehmen. Schnell, professionell und zuverlässig.",
       contactUs: "Kontaktieren Sie Uns",
@@ -732,7 +732,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      description: "No.1 Partner für die Einstellung von Gastronomie- und Hotelpersonal",
+      description: "No.1 Partner for Hospitality Staff Recruitment",
       rights: "© 2025 Human Potential Agency. Alle Rechte vorbehalten.",
     },
     // Staff Page
