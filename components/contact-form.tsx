@@ -41,15 +41,18 @@ export function ContactForm() {
     const form = event.currentTarget
     const formData = new FormData(form)
 
-    const response = await fetch("/api/contact", {
+    const response = await fetch("https://formsubmit.co/ajax/bojan@humanpotentialagency.eu", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
         name: formData.get("name"),
         phone: formData.get("phone"),
         email: formData.get("email"),
         message: formData.get("message"),
         language,
+        _subject: "New website inquiry from Human Potential Agency",
+        _template: "table",
+        _captcha: "false",
       }),
     }).catch(() => null)
 
