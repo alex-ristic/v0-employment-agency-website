@@ -20,6 +20,16 @@ const browserLanguageMap: Record<string, Language> = {
   de: "de",
 }
 
+const countryLanguageMap: Record<string, Language> = {
+  RS: "sr",
+  BA: "sr",
+  ME: "sr",
+  HR: "hr",
+  DE: "de",
+  AT: "de",
+  CH: "de",
+}
+
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 function isLanguage(value: string | null): value is Language {
@@ -43,21 +53,50 @@ function detectBrowserLanguage(): Language {
   return "en"
 }
 
+async function detectCloudflareCountryLanguage(): Promise<Language | null> {
+  try {
+    const response = await fetch("/cdn-cgi/trace", { cache: "no-store" })
+    if (!response.ok) return null
+
+    const trace = await response.text()
+    const country = trace
+      .split("\n")
+      .find((line) => line.startsWith("loc="))
+      ?.slice(4)
+      .trim()
+      .toUpperCase()
+
+    return country ? countryLanguageMap[country] ?? null : null
+  } catch {
+    return null
+  }
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>("en")
   const [t, setT] = useState(() => getTranslation("en"))
 
   useEffect(() => {
     const savedLang = localStorage.getItem("language")
-    const geoLang = getCookie("hpa-language")
-    const detectedLang = isLanguage(savedLang)
-      ? savedLang
-      : isLanguage(geoLang)
-        ? geoLang
-        : detectBrowserLanguage()
+    const cookieLang = getCookie("hpa-language")
 
-    setLanguageState(detectedLang)
-    setT(getTranslation(detectedLang))
+    if (isLanguage(savedLang) || isLanguage(cookieLang)) {
+      const selectedLanguage = isLanguage(savedLang) ? savedLang : (cookieLang as Language)
+      setLanguageState(selectedLanguage)
+      setT(getTranslation(selectedLanguage))
+      return
+    }
+
+    const browserLanguage = detectBrowserLanguage()
+    setLanguageState(browserLanguage)
+    setT(getTranslation(browserLanguage))
+
+    detectCloudflareCountryLanguage().then((cloudflareLanguage) => {
+      if (!cloudflareLanguage) return
+      setLanguageState(cloudflareLanguage)
+      setT(getTranslation(cloudflareLanguage))
+      document.cookie = `hpa-language=${cloudflareLanguage}; Max-Age=31536000; Path=/; SameSite=Lax`
+    })
   }, [])
 
   const setLanguage = (lang: Language) => {
