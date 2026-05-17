@@ -46,6 +46,7 @@ export function ContactSection() {
               <div>
                 <h3 className="font-bold mb-1 text-foreground">{t.contact.email}</h3>
                 <p className="text-muted-foreground">bojan@humanpotentialagency.eu</p>
+                <p className="text-muted-foreground">ivana@humanpotentialagency.eu</p>
               </div>
             </div>
 

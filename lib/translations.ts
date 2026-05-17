@@ -214,7 +214,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      headline: "No.1 Partner za Zapošljavanje Ugostiteljskih i Hotelijerskih Kadrova",
+      headline: "No.1 Partner for Hospitality Staff Recruitment",
       subheadline:
         "Specijalizovana agencija za pronalaženje najboljih kadrova za vaš ugostiteljski objekat. Brzo, profesionalno i pouzdano.",
       contactUs: "Kontaktirajte Nas",
@@ -438,7 +438,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      headline: "No.1 Partner za Zapošljavanje Ugostiteljskih i Hotelskih Kadrova",
+      headline: "No.1 Partner for Hospitality Staff Recruitment",
       subheadline:
         "Specijalizirana agencija za pronalaženje najboljih kadrova za vaš ugostiteljski objekt. Brzo, profesionalno i pouzdano.",
       contactUs: "Kontaktirajte Nas",
@@ -662,7 +662,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      headline: "No.1 Partner for Hospitality Staff Recruitment",
+      headline: "Nr. 1 Partner für die Rekrutierung von Fachkräften im Gastgewerbe",
       subheadline:
         "Spezialisierte Agentur für die Suche nach dem besten Personal für Ihr Gastronomieunternehmen. Schnell, professionell und zuverlässig.",
       contactUs: "Kontaktieren Sie Uns",
