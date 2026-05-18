@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useLanguage } from "@/lib/language-context"
 
-const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "ce505fb2-2250-4ea4-a06d-5cdda1056227"
 
 const formMessages = {
   en: {
