@@ -214,7 +214,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      headline: "Partner broj 1 za zapošljavanje ugostiteljskih kadrova",
+      headline: "Br. 1 Partner za Zapošljavanje Ugostiteljskih Kadrova",
       subheadline:
         "Specijalizovana agencija za pronalaženje najboljih kadrova za vaš ugostiteljski objekat. Brzo, profesionalno i pouzdano.",
       contactUs: "Kontaktirajte Nas",
@@ -438,7 +438,7 @@ export const translations = {
     },
     // Hero
     hero: {
-      headline: "Partner broj 1 za zapošljavanje ugostiteljskog osoblja",
+      headline: "Partner broj 1 za Zapošljavanje Ugostiteljskog Osoblja",
       subheadline:
         "Specijalizirana agencija za pronalaženje najboljih kadrova za vaš ugostiteljski objekt. Brzo, profesionalno i pouzdano.",
       contactUs: "Kontaktirajte Nas",
