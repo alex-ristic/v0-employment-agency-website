@@ -75,7 +75,7 @@ export const translations = {
       send: "Send Message",
       info: "Contact Information",
       address: "Address",
-      addressValue: "Split, Croatia",
+      addressValue: "Solin, Croatia",
     },
     // Footer
     footer: {
@@ -278,7 +278,7 @@ export const translations = {
       send: "Pošalji Poruku",
       info: "Kontakt Informacije",
       address: "Adresa",
-      addressValue: "Split, Hrvatska",
+      addressValue: "Solin, Hrvatska",
     },
     // Footer
     footer: {
@@ -502,7 +502,7 @@ export const translations = {
       send: "Pošalji Poruku",
       info: "Kontakt Informacije",
       address: "Adresa",
-      addressValue: "Split, Hrvatska",
+      addressValue: "Solin, Hrvatska",
     },
     // Footer
     footer: {
@@ -728,7 +728,7 @@ export const translations = {
       send: "Nachricht Senden",
       info: "Kontaktinformationen",
       address: "Adresse",
-      addressValue: "Split, Kroatien",
+      addressValue: "Solin, Kroatien",
     },
     // Footer
     footer: {

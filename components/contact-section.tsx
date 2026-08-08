@@ -56,8 +56,8 @@ export function ContactSection() {
               </div>
               <div>
                 <h3 className="font-bold mb-1 text-foreground">{t.contact.address}</h3>
-                <p className="text-muted-foreground">Glavice 144</p>
-                <p className="text-muted-foreground">21000 {t.contact.addressValue}</p>
+                <p className="text-muted-foreground">Matoševa 22</p>
+                <p className="text-muted-foreground">21210 {t.contact.addressValue}</p>
               </div>
             </div>
 
